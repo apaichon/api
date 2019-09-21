@@ -1,0 +1,46 @@
+###
+get http://localhost:3030/transStatus
+
+
+###
+post http://localhost:3030/transStatus
+content-type: application/json
+
+{
+  "name_en_us": "Active",
+  "name_th_th": "ใช้งาน",
+  "description": "สถานะสำหรับใช้งาน",
+  "isActive": true
+}
+
+
+
+###
+get http://localhost:3030/accountingJournalType
+
+
+###
+post http://localhost:3030/accountingJournalType
+content-type: application/json
+
+{
+  "name_en_us": "Active",
+  "name_th_th": "ใช้งาน",
+  "description": "สถานะสำหรับใช้งาน",
+  "transStatusId": 1
+}
+
+###
+put http://localhost:3030/accountingJournalType/2
+content-type: application/json
+
+{
+  "name_en_us": "Inactive",
+  "name_th_th": "ไม่ใช้งาน",
+  "description": "สถานะสำหรับไม่ใช้งาน",
+  "createdBy": "apaichon",
+  "transStatusId": 1
+}
+
+###
+delete http://localhost:3030/accountingJournalType/2
