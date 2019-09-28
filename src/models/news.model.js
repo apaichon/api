@@ -12,16 +12,44 @@ module.exports = function (app) {
       primaryKey: true,
       autoIncrement: true
     },
-    name_en_us: {
-      type: DataTypes.STRING,
+    title: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    name_th_th: {
-      type: DataTypes.STRING,
+    newsCategoryId:{
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: false
+    },
+    tags: {
+      type: DataTypes.JSONB,
+      allowNull: true
+    },
+    genreId: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    geolocation: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    locationAddress: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    thumnailUrl: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    salesCondition: {
+      type: DataTypes.JSONB,
+      allowNull: true
+    },
+    totalPrice: {
+      type: DataTypes.NUMBER,
       allowNull: true
     },
     createdAt: {
