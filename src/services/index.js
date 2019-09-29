@@ -38,13 +38,15 @@ const company = require('./profile/company.service')
 const creditTerm = require('./accounting/creditTerm.service')
 const businessRules = require('./appSetting/businessRules.service')
 const transStatus = require('./appSetting/transStatus.service')
+const newsAssets = require('./news/newsAssets.service');
+
 // const accountingJournalType = require('./appSetting/accountingJournalType.service');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(postgreSql);
   app.configure(accountPgSql);
   app.configure(profiletPgSql);
-  
+
   app.configure(accountProvider);
   app.configure(accountStatus);
   app.configure(activatePurpose);
@@ -81,4 +83,5 @@ module.exports = function (app) {
   app.configure(creditTerm);
   app.configure(businessRules);
   app.configure(transStatus);
+  app.configure(newsAssets);
 };
