@@ -40,6 +40,10 @@ const businessRules = require('./appSetting/businessRules.service')
 const transStatus = require('./appSetting/transStatus.service')
 const newsAssets = require('./news/newsAssets.service');
 
+
+const maslov = require('./maslov/maslov.service.js');
+
+
 // const accountingJournalType = require('./appSetting/accountingJournalType.service');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
@@ -84,4 +88,6 @@ module.exports = function (app) {
   app.configure(businessRules);
   app.configure(transStatus);
   app.configure(newsAssets);
+
+  app.configure(maslov);
 };
