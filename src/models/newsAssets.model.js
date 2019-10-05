@@ -9,8 +9,7 @@ module.exports = function (app) {
     assetId: {
       type: DataTypes.UUID,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+      primaryKey: true
     },
     newsId: {
       type: DataTypes.UUID,
@@ -19,7 +18,8 @@ module.exports = function (app) {
     title: {
       type: DataTypes.STRING,
       allowNull: false
-    },
+    }
+    ,
     monthYear: {
       type: DataTypes.SMALLINT,
       allowNull: false
@@ -27,8 +27,8 @@ module.exports = function (app) {
     mediaTypeId: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    mimeType: {
+    }
+    , mimeType: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -67,8 +67,8 @@ module.exports = function (app) {
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: true
-    },
-    updatedBy: {
+    }
+    , updatedBy: {
       type: DataTypes.STRING,
       allowNull: true
     },
