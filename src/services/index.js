@@ -39,9 +39,7 @@ const creditTerm = require('./accounting/creditTerm.service')
 const businessRules = require('./appSetting/businessRules.service')
 const transStatus = require('./appSetting/transStatus.service')
 const newsAssets = require('./news/newsAssets.service');
-
-
-const maslov = require('./maslov/maslov.service.js');
+const broadcasterPackage = require('./accounting/broadcasterPackage.service');
 
 
 // const accountingJournalType = require('./appSetting/accountingJournalType.service');
@@ -88,6 +86,5 @@ module.exports = function (app) {
   app.configure(businessRules);
   app.configure(transStatus);
   app.configure(newsAssets);
-
-  app.configure(maslov);
+  app.configure(broadcasterPackage);
 };
