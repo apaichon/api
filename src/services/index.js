@@ -40,6 +40,10 @@ const businessRules = require('./appSetting/businessRules.service')
 const transStatus = require('./appSetting/transStatus.service')
 const newsAssets = require('./news/newsAssets.service');
 const broadcasterPackage = require('./accounting/broadcasterPackage.service');
+const invoice = require('./accounting/invoice.service');
+const receipt = require('./accounting/receipt.service');
+const invoiceItem = require('./accounting/invoiceItem.service');
+const receiptItem = require('./accounting/receiptItem.service');
 
 
 // const accountingJournalType = require('./appSetting/accountingJournalType.service');
@@ -87,4 +91,8 @@ module.exports = function (app) {
   app.configure(transStatus);
   app.configure(newsAssets);
   app.configure(broadcasterPackage);
+  app.configure(invoice);
+  app.configure(receipt);
+  app.configure(invoiceItem);
+  app.configure(receiptItem);
 };
