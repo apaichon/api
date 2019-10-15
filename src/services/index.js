@@ -46,6 +46,9 @@ const invoiceItem = require('./accounting/invoiceItem.service');
 const receiptItem = require('./accounting/receiptItem.service');
 
 
+const buyPackageHistory = require('./accounting/buyPackageHistory.service');
+
+
 // const accountingJournalType = require('./appSetting/accountingJournalType.service');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
@@ -95,4 +98,5 @@ module.exports = function (app) {
   app.configure(receipt);
   app.configure(invoiceItem);
   app.configure(receiptItem);
+  app.configure(buyPackageHistory);
 };
